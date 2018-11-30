@@ -11,6 +11,7 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
@@ -25,26 +26,29 @@
   				</span>
   			</div>
 		</nav>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_menu">
+		<div class="container position-relative">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
-		  <div class="container">
-		  	<a class="navbar-brand ml-auto mr-auto" href="#!">LOGO</a>
-		  	
+		  	<a class="navbar-brand position-relative m-auto" href="./clip.html">LOGO</a>
+		  	<form class="form-inline position-absolute" style="right:0;top:0;">
+			    <input class="form-control mr-sm-2 d-md-block d-none" type="text" placeholder="Search">
+			    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+			 </form>
 		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		  	  <ul class="navbar-nav mr-auto mt-2 mt-md-0">
 		  	    <li class="nav-item dropdown">
-		  	      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!">LIVE</a>
+		  	      <a class="nav-link dropdown-toggle pl-5" data-toggle="dropdown" href="#!">LIVE</a>
 		  	      <div class="dropdown-menu">
-		  	      	<a href="#" class="dropdown-item">인기</a>
+		  	      	<a href="./sub_live.html" class="dropdown-item">인기</a>
 		  	      	<a href="#" class="dropdown-item">전체</a>
 		  	      	<a href="#" class="dropdown-item">예능</a>
 		  	      	<a href="#" class="dropdown-item">키즈/애니</a>
 		  	      </div>
 		  	    </li>
 		  	    <li class="nav-item dropdown">
-		  	      <a class="nav-link" data-toggle="dropdown" href="#!">다시보기</a>
+		  	      <a class="nav-link dropdown-toggle pl-5" data-toggle="dropdown" href="#!">다시보기</a>
 		  	      <div class="dropdown-menu">
 		  	      	<a href="#" class="dropdown-item">최신/인기</a>
 		  	      	<a href="#" class="dropdown-item">무료</a>
@@ -53,16 +57,16 @@
 		  	      </div>
 		  	    </li>
 		  	    <li class="nav-item dropdown">
-		  	      <a class="nav-link" data-toggle="dropdown" href="#!">영화</a>
+		  	      <a class="nav-link dropdown-toggle pl-5" data-toggle="dropdown" href="#">영화</a>
 		  	      <div class="dropdown-menu">
 		  	      	<a href="#" class="dropdown-item">월정액 무제한</a>
-		  	      	<a href="#" class="dropdown-item">최신/인기</a>
+		  	      	<a href="sub_movie.html" class="dropdown-item">최신/인기</a>
 		  	      	<a href="#" class="dropdown-item">드라마</a>
 		  	      	<a href="#" class="dropdown-item">로맨스/멜로</a>
 		  	      </div>
 		  	    </li>
 		  	    <li class="nav-item dropdown">
-		  	      <a class="nav-link" data-toggle="dropdown" href="#!">Pick!Pick!</a>
+		  	      <a class="nav-link dropdown-toggle pl-5" data-toggle="dropdown" href="#!">Pick!Pick!</a>
 		  	      <div class="dropdown-menu">
 		  	      	<a href="#" class="dropdown-item">HOP CLIP</a>
 		  	      	<a href="#" class="dropdown-item">인기 키워드</a>
@@ -71,14 +75,10 @@
 		  	      </div>
 		  	    </li>
 		  	    <li class="nav-item">
-		  	      <a class="nav-link" href="#!">매거진</a>
+		  	      <a class="nav-link dropdown-toggle pl-5" href="#!">매거진</a>
 		  	    </li>
 		  	  </ul>
 		  	</div>
-		  	<form class="form-inline">
-			    <input class="form-control mr-sm-2 d-md-block d-none" type="text" placeholder="Search">
-			    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-			 </form>
 		  </div>
 		</nav>
 	</div>
@@ -118,10 +118,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="container pt-5">
+	<div class="container pt-5" >
 		<h2 class="live_hot pb-5">LIVE 인기채널</h2>
-		<div class="row">
-			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
+		<div class="row" id="poster">
+			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px" >
 				<!-- <a href="#"><img src="./images/sinseouki6.png" alt="sinseouki6" class="w-100"></a> -->
 				<div class="card">
 				  <a href="#">
@@ -229,14 +229,9 @@
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<!-- <a href="#"><img src="./images/sinseouki6.png" alt="sinseouki6" class="w-100"></a> -->
 				<div class="card">
-				  <a href="#">
-				  	<div class="box">
-				  		<p>선다방 가을겨울편</p>
-				  	</div>
-				  </a>
-				  <img class="card-img-top" src="./images/new01.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/new01.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
-				    <h4 class="card-title">선다방 가을겨울편</h4>
+				    <h4 class="card-title">선다방 가을겨울</h4>
 				    <p class="card-text">
 				     어쩌면 오늘은
 				    </p>
@@ -246,44 +241,30 @@
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>나인룸</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/new02.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/new02.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">나인룸</h4>
 				    <p class="card-text">
-				    	그곳에서 모든게 시작됐다
+				    	그곳에서 모든게 시작...
 				    </p>
 				  </div>
 				</div>
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>아이돌룸</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/new06.jpg" alt="Card image cap">
+				  <a href="
+				  #"><img class="card-img-top" src="./images/new06.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">아이돌룸</h4>
 				    <p class="card-text">
-				      신뢰도 1위 아이돌 전문 방송
+				      신뢰도 1위 아이돌 전...
 				    </p>
 				  </div>
 				</div>
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>계룡 선녀전</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/new03.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/new03.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">계룡 선녀전</h4>
 				    <p class="card-text">
@@ -294,12 +275,7 @@
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>신의퀴즈 리부트</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/new04.jpg" alt="Card image cap">
+				 <a href="#"> <img class="card-img-top" src="./images/new04.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">신의퀴즈 리부트</h4>
 				    <p class="card-text">
@@ -311,16 +287,11 @@
 
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>놀라운 토요일</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/new05.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/new05.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">놀라운 토요일</h4>
 				    <p class="card-text">
-				      웃음을 건 위대한 탐험의 시작
+				      웃음을 건 위대한 탐...
 				    </p>
 				  </div>
 				</div>
@@ -334,12 +305,7 @@
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<!-- <a href="#"><img src="./images/sinseouki6.png" alt="sinseouki6" class="w-100"></a> -->
 				<div class="card">
-				  <a href="#">
-				  	<div class="box">
-				  		<p>암수살인</p>
-				  	</div>
-				  </a>
-				  <img class="card-img-top" src="./images/movie01.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/movie01.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">암수살인</h4>
 				    <p class="card-text">
@@ -351,28 +317,18 @@
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>미쓰백</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/movie02.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/movie02.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">미쓰백</h4>
 				    <p class="card-text">
-				    	네 옆에 있을게 지켜줄게
+				    	네 옆에 있을게 지켜...
 				    </p>
 				  </div>
 				</div>
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>보헤미안 랩소디</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/movie06.jpg" alt="Card image cap">
+				 <a href="#"> <img class="card-img-top" src="./images/movie06.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">보헤미안 랩소디</h4>
 				    <p class="card-text">
@@ -383,32 +339,22 @@
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>스타 이즈 본</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/movie03.jpg" alt="Card image cap">
+				 <a href="#"> <img class="card-img-top" src="./images/movie03.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">스타 이즈 본</h4>
 				    <p class="card-text">
-				      전 세대를 관통하는 마스터피스
+				      전 세대를 관통하는...
 				    </p>
 				  </div>
 				</div>
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>곰돌이 푸 다시 만나 행복해</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/movie04.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/movie04.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
-				    <h4 class="card-title">곰돌이 푸 다시 만나 행복해</h4>
+				    <h4 class="card-title">곰돌이 푸 다시...</h4>
 				    <p class="card-text">
-				     어른이 된 나에게 잊고 있던 친구가 찾아왔다
+				     어른이 된 나에게 잊...
 				    </p>
 				  </div>
 				</div>
@@ -416,12 +362,7 @@
 
 			<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>라라랜드</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/movie05.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/movie05.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">라라랜드</h4>
 				    <p class="card-text">
@@ -439,12 +380,7 @@
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<!-- <a href="#"><img src="./images/sinseouki6.png" alt="sinseouki6" class="w-100"></a> -->
 				<div class="card">
-				  <a href="#">
-				  	<div class="box">
-				  		<p>문제적 남자</p>
-				  	</div>
-				  </a>
-				  <img class="card-img-top" src="./images/pick01.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/pick01.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">문제적 남자</h4>
 				    <p class="card-text">
@@ -456,28 +392,18 @@
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  		<p>수미네 반찬</p>
-					  </div>
-										</a>
-				  <img class="card-img-top" src="./images/pick02.jpg" alt="Card image cap">
-				  <div class="card-body">
-				    <h4 class="card-title">수미네 반찬</h4>
-				    <p class="card-text">
-				    	김수미의 손맛 전수 클래스
-				    </p>
-				  </div>
+				  <a href="#"><img class="card-img-top" src="./images/pick02.jpg" alt="Card image cap">
+				  	<div class="card-body">
+				  	  <h4 class="card-title">수미네 반찬</h4>
+				  	  <p class="card-text">
+				  	  	김수미의 손맛 전수 클래스
+				  	  </p>
+				  	</div></a>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>와썹맨</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/pick03.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/pick03.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">와썹맨</h4>
 				    <p class="card-text">
@@ -488,12 +414,7 @@
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>뉴이스트W</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/pick04.jpg" alt="Card image cap">
+				 <a href="#"> <img class="card-img-top" src="./images/pick04.jpg" alt="Card image cap"></a>
 				  <div class="card-body">
 				    <h4 class="card-title">뉴이스트W</h4>
 				    <p class="card-text">
@@ -510,43 +431,47 @@
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<!-- <a href="#"><img src="./images/sinseouki6.png" alt="sinseouki6" class="w-100"></a> -->
 				<div class="card">
-				  <a href="#">
-				  	<div class="box">
-				  		<p>남자친구 미리보기</p>
-				  	</div>
-				  </a>
-				  <img class="card-img-top" src="./images/zine01.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/zine01.jpg" alt="Card image cap"></a>
+				  <div class="card-body">
+				    <h4 class="card-title">남자친구</h4>
+				    <p class="card-text">
+				      남자친구 미리보기
+				    </p>
+				  </div>
 				</div>
 
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>뷰티인사이드 인사이드</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/zine02.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/zine02.jpg" alt="Card image cap"></a>
+				  <div class="card-body">
+				    <h4 class="card-title">뷰티인사이드</h4>
+				    <p class="card-text">
+				      뷰티인사이드 파헤치기
+				    </p>
+				  </div>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>더 꼰대 라이브</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/zine03.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/zine03.jpg" alt="Card image cap"></a>
+				  <div class="card-body">
+				    <h4 class="card-title">은주의 방</h4>
+				    <p class="card-text">
+				      은주가 알려주는 셀프 인테리어
+				    </p>
+				  </div>
 				</div>
 			</div>
 			<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6" style="padding:0 5px">
 				<div class="card">
-					<a href="#">
-						<div class="box">
-					  	<p>도깨비</p>
-					  </div>
-					</a>
-				  <img class="card-img-top" src="./images/zine04.jpg" alt="Card image cap">
+				  <a href="#"><img class="card-img-top" src="./images/zine04.jpg" alt="Card image cap"></a>
+				  <div class="card-body">
+				    <h4 class="card-title">쇼미더머니777</h4>
+				    <p class="card-text">
+				      계획대로 되고 있어
+				    </p>
+				  </div>
 				</div>
 			</div>
 		</div>
@@ -573,6 +498,7 @@
 		<div class="container pt-5 pb-5">
 			<div class="main_footer">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ex optio sit. Quae aliquid at, cum quo nulla ratione blanditiis quos, sed amet tenetur fugiat accusantium ipsam deleniti officia, illum.
+				<p>Copyright ⓒkkang1225</p>
 			</div>
 		</div>
 	</div>
